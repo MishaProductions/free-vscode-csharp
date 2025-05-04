@@ -36,12 +36,15 @@
       "supported": false
     }
   },
+  "extensionKind": [
+    "workspace"
+  ],
   "defaults": {
-    "roslyn": "4.14.0-3.25178.1",
+    "roslyn": "5.0.0-1.25252.3",
     "omniSharp": "1.39.12",
-    "razor": "9.0.0-preview.25177.4",
+    "razor": "10.0.0-preview.25252.1",
     "razorOmnisharp": "7.0.0-preview.23363.1",
-    "xamlTools": "17.14.35913.250"
+    "xamlTools": "17.14.36010.33"
   },
   "main": "./dist/extension",
   "l10n": "./l10n",
@@ -1487,6 +1490,11 @@
             "type": "boolean",
             "default": true,
             "description": "%configuration.razor.languageServer.useNewFormattingEngine%"
+          },
+          "razor.languageServer.cohostingEnabled": {
+            "type": "boolean",
+            "default": false,
+            "description": "%configuration.razor.languageServer.cohostingEnabled%"
           }
         }
       },
@@ -5529,6 +5537,9 @@
     "configurationDefaults": {
       "[xaml]": {
         "editor.wordBasedSuggestions": "off"
+      },
+      "[csharp]": {
+        "editor.formatOnType": true
       }
     }
   }
